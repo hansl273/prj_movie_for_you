@@ -34,3 +34,21 @@ df_xy = pd.DataFrame({'words':labels,
                       'y':new_value[:, 1]})
 print(df_xy)
 print(df_xy.shape)
+df_xy.loc[df_xy.shape[0]] = (key_word, 0, 0)
+
+plt.figure(figsize=(8, 8))
+plt.scatter(0, 0, s=1500, marker='*')
+
+for i in range(len(df_xy)-1) :
+    a = df_xy.loc[[i, 10]] # 10은 키원드
+    plt.plot(a.x, a.y, '-D', linewidth=1)
+    plt.annotate(df_xy.words[i], xytext=(1, 1),
+                 xy=(df_xy.x[i], df_xy.y[i]),
+                 textcoords = 'offset points',
+                 ha = 'right', va = 'bottom')
+
+plt.show()
+
+
+
+
