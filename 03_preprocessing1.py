@@ -24,6 +24,14 @@ for review in df.reviews:
     if count % 100 == 0:
         print()
     review = re.sub('[^가-힣 ]', ' ', review)  # review 문장 속 한글, 띄어쓰기 제외 모두 띄어쓰기로 대체
+    # review = review.split()
+    # words = []
+    # for word in review:
+    #     if len(word) > 20:
+    #         word = ' '
+    #         words.append(word)
+    # review = ' '.join(words)
+
     ## 형태소 분리
     token = okt.pos(review, stem=True)  # pos -> (형태소, 품사)형태로 분리
     df_token = pd.DataFrame(token, columns=['word', 'class'])
@@ -34,7 +42,7 @@ for review in df.reviews:
     words = []
     for word in df_token.word:
         ## 한 글자, 20글자 이상 제거
-        if 1 < len(word) < 20:
+        if len(word) > 1:
             if word not in stopwords:
                 words.append(word)
     # 형태소 리스트 + 품사 리스트
