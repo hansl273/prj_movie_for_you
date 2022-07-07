@@ -1,4 +1,5 @@
-# prj_movie_for_you
+# 크롬 드라이버 버전 맞추기
+https://chromedriver.chromium.org/downloads
 # 영화랭킹 디렉토리 개봉년도 review Data Crawling
 https://movie.naver.com/movie/sdb/browsing/bmovie_nation.naver 
 D:\work\python\prj_movie_for_you\crawling_data and models 생성
