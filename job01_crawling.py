@@ -66,7 +66,7 @@ for i in range(27, 51): #페이지 38+1, 부분 페이지 크롤링
         df.to_csv('./crawling_data/reviews_{}_{}page.csv'.format(LEJ_year, i),index=False)
     except:
         print('page', i)
-
+        # print('debug')
 
 driver.close()
 

@@ -47,6 +47,7 @@ sentence_vec = Tfidf.transform([sentence])
 cosine_sim = linear_kernel(sentence_vec, Tfidf_matrix)
 recommendation = getRecommendation(cosine_sim)
 print(recommendation[:10])
+# print('debug')
 
 # 문장 이용
 okt = Okt()

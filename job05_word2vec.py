@@ -12,6 +12,7 @@ for sentence in cleaned_token_reviews:
     token = sentence.split()
     cleaned_tokens.append(token)
 print(cleaned_tokens[0])
+# print('debug')
 
 embedding_model = Word2Vec(cleaned_tokens, vector_size=100,
                            window=4, min_count=20,

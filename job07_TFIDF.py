@@ -11,6 +11,8 @@ Tfidf_matrix = Tfidf.fit_transform(df_reviews['reviews'])
 print(Tfidf_matrix.shape)
 # (3182, 84461)
 print(Tfidf_matrix[0].shape)
+# print('debug')
+
 # (1, 84461)
 with open('./models/tfidf.pickle', 'wb') as f:
     pickle.dump(Tfidf, f)

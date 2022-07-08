@@ -10,6 +10,8 @@ from PyQt5.QtCore import QStringListModel
 
 form_window = uic.loadUiType('./movie_recommendation.ui')[0]
 
+
+# print('debug')
 class Exam(QWidget, form_window):
     def __init__(self):
         super().__init__()

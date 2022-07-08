@@ -34,6 +34,8 @@ df_xy = pd.DataFrame({'words':labels,
                       'y':new_value[:, 1]})
 print(df_xy)
 print(df_xy.shape)
+# print('debug')
+
 df_xy.loc[df_xy.shape[0]] = (key_word, 0, 0)
 
 plt.figure(figsize=(8, 8))

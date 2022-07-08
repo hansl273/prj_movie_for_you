@@ -24,6 +24,7 @@ print(words)
 worddict = collections.Counter(words)
 worddict = dict(worddict)
 print(worddict)
+# print('debug')
 
 wordcloud_img = WordCloud(background_color='white', max_words=2000,
                           font_path=font_path).generate_from_frequencies(worddict)

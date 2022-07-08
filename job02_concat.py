@@ -17,7 +17,7 @@ for path in data_paths:  # 경로지정으로
 
 df.drop_duplicates(inplace=True) # 합친 파일 중복값 제거
 df.info()
-
+# print('debug')
 my_year = 2022 # 년도 체크
 # df.to_csv("./crawling_data/reviews_{}.csv".format(my_year), index=False)
 df.to_csv("./crawling_data/reviews_2017_2022.csv", index=False) #6개년도

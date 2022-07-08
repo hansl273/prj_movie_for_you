@@ -62,7 +62,7 @@ plt.show()
 
 df.to_csv('./crawling_data/cro/cleaned_review_2018.csv', index=False)
 df.info()
-
+# print('debug')
 
 
 

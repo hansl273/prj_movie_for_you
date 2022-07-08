@@ -13,4 +13,6 @@ for title in df['title'].unique():
     one_sentences.append(one_sentence)
 df_one = pd.DataFrame({'titles':df['title'].unique(), 'reviews':one_sentences})
 print(df_one.head())
+# print('debug')
+
 df_one.to_csv('./crawling_data/one/cleaned_review_2018.csv', index=False)
