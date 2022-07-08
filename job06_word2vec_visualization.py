@@ -11,7 +11,7 @@ mpl.rcParams['axes.unicode_minus'] = False
 rc('font', family = font_name)
 
 embedding_model = Word2Vec.load("./models/word2vec_2017_2022_movies.model")
-key_word = '사랑'
+key_word = '겨울'
 sim_word = embedding_model.wv.most_similar(key_word, topn=10)
 print(sim_word)
 
@@ -40,7 +40,7 @@ plt.figure(figsize=(8, 8))
 plt.scatter(0, 0, s=1500, marker='*')
 
 for i in range(len(df_xy)-1) :
-    a = df_xy.loc[[i, 10]] # 10은 키원드
+    a = df_xy.loc[[i, 10]] # 10은 키워드
     plt.plot(a.x, a.y, '-D', linewidth=1)
     plt.annotate(df_xy.words[i], xytext=(1, 1),
                  xy=(df_xy.x[i], df_xy.y[i]),

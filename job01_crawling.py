@@ -23,7 +23,7 @@ for i in range(27, 51): #페이지 38+1, 부분 페이지 크롤링
     reviews = []
     try:
 
-        for j in range(1, 21): #영화 리스트 + 10
+        for j in range(1, 21): #영화 리스트 + 1
             driver.get(url)
             time.sleep(0.5)
             movie_title_xpath = '//*[@id="old_content"]/ul/li[{}]/a'.format(j)
